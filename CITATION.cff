@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+title: >-
+  Meža postījumu – mizgraužu identifikācija ar
+  tālizpētes palīdzību Latvijas teritorijā
+message: Please cite this software using these metadata.
+type: software
+authors:
+  - given-names: Lukass
+    family-names: Kellijs
+    email: lukasskellijs@gmail.com
+    affiliation: RTU Inženierzinātņu vidusskola
+date-released: 2022-01-16
