@@ -10,3 +10,4 @@ Visi saturētie faili ir kā pielikums Zinātniskās pētniecības darbam "Meža
 ##### 6) large_df_train.xlsx - pilnā apkopotā pētījumā lietotā datu kopa modeļa apmācībai un izvērtējumam
 ##### 7) rfc_bark_beetle_model.sav - pētījumā iegūtais mdoelis - algoritmiska struktūra
 ##### 8) small_df_train.xlsx - neliela viegli pārskatāma datu kopa, kas apkopo inficēto un veselo pikseļu vidējos raksturlielumus un to izkliedi
+###### 9) ipynb files in pdf format - .ipynb faili pdf formātā vieglākai pieejai un pārskatam
