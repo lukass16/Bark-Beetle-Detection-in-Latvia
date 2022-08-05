@@ -1,13 +1,13 @@
 # Bark-Beetle-Detection-in-Latvia
 
-Visi saturētie faili ir kā pielikums Zinātniskās pētniecības darbam "Meža postījumu – mizgraužu identifikācija ar tālizpētes palīdzību Latvijas teritorijā"
-## Repozitorijā atrodamie faili ir sekojoši:
-##### 1) Masking shadows.ipynb - pētījumā izstrādātais/lietotais kods ēnu maskēšanai
-##### 2) demmask.ipynb - pētījumā izstrādātais/lietotais kods izcirtumu maskēšanai
-##### 3) evaluate_model.py - pētījumā izstrādātais/lietotais kods apmācītā modeļa izvērtēšanai, identificējot postījumus visā pētāmajā zonā
-##### 4) full_method.py - visu koda struktūru un metožu (tā skaitā citu šajā repozitorijā atrodamo) apkopojums
-##### 5) get_DF.py - pētījumā izstrādātais/lietotais kods intereses zonu apkopojuma, datu kopu ieguvei, kā arī modeļa izveidei un apmācībai
-##### 6) large_df_train.xlsx - pilnā apkopotā pētījumā lietotā datu kopa modeļa apmācībai un izvērtējumam
-##### 7) rfc_bark_beetle_model.sav - pētījumā iegūtais mdoelis - algoritmiska struktūra
-##### 8) small_df_train.xlsx - neliela viegli pārskatāma datu kopa, kas apkopo inficēto un veselo pikseļu vidējos raksturlielumus un to izkliedi
-##### 9) ipynb files in pdf format - .ipynb faili pdf formātā vieglākai pieejai un pārskatam
+All files contained in the this repository are a part of the scientific study "Forest Damage – Bark Beetle Identification Using Remote Sensing in Latvian Territories"
+## The files contained in the repository contain the following:
+##### 1) Masking shadows.ipynb - the code produced and used in the study for the creation of shadow masks
+##### 2) demmask.ipynb - the code produced and used in the study for the creation of forest clearing masks
+##### 3) evaluate_model.py - the code produced and used in the study for the analysis of the trained model by identifying damages in the entire study area
+##### 4) full_method.py - a summary of all code structures and methods (including others found in this repository)
+##### 5) get_DF.py - the code produced and used in the study for obtaining the regions of interest and main data set used for the training and analysis of the model
+##### 6) large_df_train.xlsx - The full large dataset used in the study for training and analysing the model
+##### 7) rfc_bark_beetle_model.sav - the algorithmic model obtained in the study
+##### 8) small_df_train.xlsx - a small, clear dataset that summarizes the infested and healthy pixel average values and their dispersion
+##### 9) ipynb files in pdf format - .ipynb files in a .pdf format for easier access and overview
