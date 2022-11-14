@@ -1,6 +1,7 @@
 # Bark-Beetle-Detection-in-Latvia
 
-All files contained in this repository are a part of the scientific study "Forest Damage – Bark Beetle Identification Using Remote Sensing in Latvian Territories"
+All files contained in this repository are a part of the scientific study "Forest Damage – Bark Beetle Identification Using Remote Sensing in Latvian Territories".
+
 ## The files in the repository include the following:
 ##### 1) Masking shadows.ipynb - the code produced and used in the study for the creation of shadow masks
 ##### 2) demmask.ipynb - the code produced and used in the study for the creation of forest clearing masks
