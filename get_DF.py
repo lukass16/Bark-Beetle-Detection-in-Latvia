@@ -157,6 +157,28 @@ for region in regions:
     
 large_df = pd.DataFrame(data=data, columns = "Label Red Green Blue Nir".split())
 
+plot_data = list()
+
+for index, row in large_df.iterrows():
+    kategorija = ""
+    if(row['Label'] == 'infected'):
+        kategorija = "Infested"
+    else:
+        kategorija = "Healthy"
+    plot_data.append([kategorija, "Red", row["Red"]])
+    plot_data.append([kategorija, "Green", row["Green"]])
+    plot_data.append([kategorija, "Blue", row["Blue"]])
+    plot_data.append([kategorija, "NIR", row["Nir"]])
+
+plot_df = pd.DataFrame(data=plot_data, columns = "Category,Band,Pixel intensity".split(","))
+
+plt.figure(figsize=(12,6)) # this creates a figure 8 inch wide, 4 inch high
+sns.boxplot(x='Band', y="Pixel intensity", hue="Category", data=plot_df, palette="prism")
+plt.show()
+
+
+
+
 plt.figure(figsize=(8,4)) # this creates a figure 8 inch wide, 4 inch high
 sns.boxplot(x='Label', y="Nir",data=large_df,palette="rainbow")
 plt.show()
@@ -164,6 +186,8 @@ plt.show()
 plt.figure(figsize=(8,4))
 sns.boxplot(x='Label', y="Red",data=large_df,palette="rainbow")
 plt.show()
+
+
 
 X = large_df.drop('Label',axis=1)
 Y = large_df['Label']
@@ -175,6 +199,7 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.30)
 ###---------------------------------###
 
 
+
 #Random forest
 rfc = RandomForestClassifier(n_estimators=500)
 rfc.fit(X_train, Y_train)
@@ -184,11 +209,11 @@ print(classification_report(Y_test,rfc_pred))
 print(confusion_matrix(Y_test,rfc_pred))
 
 #Save model
-save_name = "rfc_model_dis.sav"
-pickle.dump(rfc, open(save_name, "wb"))
+#save_name = "rfc_model_dis.sav"
+#pickle.dump(rfc, open(save_name, "wb"))
 
-confusion_table = pd.DataFrame(data=confusion_matrix(Y_test,rfc_pred),columns="Vesels Nevesels".split(),index="Vesels Nevesles".split())
+confusion_table = pd.DataFrame(data=confusion_matrix(Y_test,rfc_pred),columns="Healthy Infested".split(),index="Healthy Infested".split())
 ax = sns.heatmap(confusion_table,cmap='coolwarm',annot=True)
 #ax.set_title("Apjukuma matrica")
-ax.set_xlabel("Patiesās vērtības")
-ax.set_ylabel("Prognozētās vērtības")
+ax.set_xlabel("True values")
+ax.set_ylabel("Predicted values")
